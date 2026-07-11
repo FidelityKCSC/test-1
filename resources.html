@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fidelity KCSC | Market Resources</title>
+    <link rel="icon" href="/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; line-height: 1.6; }
+        .container { max-width: 1200px; margin: auto; padding: 2rem; }
+        .section-title { text-align: center; margin-bottom: 1rem; color: #1a3c5c; }
+        .section-subtitle { text-align: center; margin-bottom: 2rem; color: #555; }
+
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .resource-card {
+            background: #f4f4f4;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #1a3c5c;
+            text-align: center;
+        }
+
+        .resource-card h3 {
+            color: #1a3c5c;
+            margin-bottom: 0.5rem;
+        }
+
+        .resource-card p {
+            margin-bottom: 1rem;
+            color: #555;
+        }
+
+        .resource-card a {
+            display: block;
+            color: #1a3c5c;
+            text-decoration: none;
+            margin: 0.3rem 0;
+            font-weight: bold;
+        }
+
+        .resource-card a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .resources-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+    <script>
+        function loadHeaderFooter() {
+            fetch('/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-placeholder').innerHTML = data;
+                });
+            fetch('/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-placeholder').innerHTML = data;
+                });
+        }
+        document.addEventListener("DOMContentLoaded", loadHeaderFooter);
+    </script>
+</head>
+<body>
+
+    <div id="header-placeholder"></div>
+    
+    <div class="container">
+        <h1 class="section-title">Market Resources</h1>
+        <p class="section-subtitle">
+            Key references and tools supporting international trade transactions and market execution.
+        </p>
+        
+        <div class="resources-grid">
+            
+            <div class="resource-card">
+                <h3>📊 Market Intelligence & Data</h3>
+                <p>Global trade data, pricing benchmarks, and macroeconomic indicators supporting informed decision-making.</p>
+                <a href="https://stats.wto.org/" target="_blank">WTO Trade Statistics →</a>
+                <a href="https://data.worldbank.org/" target="_blank">World Bank Open Data →</a>
+                <a href="https://comtrade.un.org/" target="_blank">UN Comtrade Database →</a>
+            </div>
+
+            <div class="resource-card">
+                <h3>📋 Trade Documentation & Standards</h3>
+                <p>Essential frameworks, documentation references, and international standards used in structured trade transactions.</p>
+                <a href="https://iccwbo.org/business-solutions/incoterms-rules/" target="_blank">ICC Incoterms® Rules →</a>
+                <a href="https://www.trade.gov/commercial-invoice" target="_blank">Commercial Invoice Guide →</a>
+                <a href="https://iccwbo.org/business-solutions/trade-facilitation/certificates-of-origin/" target="_blank">Certificate of Origin →</a>
+            </div>
+
+            <div class="resource-card">
+                <h3>💰 Financial & Trade Instruments</h3>
+                <p>Overview of financial mechanisms and banking instruments commonly used in international trade transactions.</p>
+                <a href="https://www.swift.com/our-solutions/trade-finance" target="_blank">Trade Finance Overview (SWIFT) →</a>
+                <a href="https://iccwbo.org/business-solutions/trade-facilitation/rules-for-documentary-credits-ucp-600/" target="_blank">UCP 600 (ICC Rules) →</a>
+                <a href="https://baft.org/trade" target="_blank">BAFT Trade Finance Resources →</a>
+            </div>
+
+            <div class="resource-card">
+                <h3>🔍 Inspection, Compliance & Verification</h3>
+                <p>Resources supporting due diligence, compliance standards, and third-party verification processes.</p>
+                <a href="https://www.sgs.com/" target="_blank">SGS Inspection Services →</a>
+                <a href="https://www.bureauveritas.com/" target="_blank">Bureau Veritas →</a>
+                <a href="https://www.intertek.com/" target="_blank">Intertek →</a>
+            </div>
+
+        </div>
+    </div>
+    
+    <div id="footer-placeholder"></div>
+
+</body>
+</html>
