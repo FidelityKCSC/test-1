@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fidelity KCSC | Execution Process</title>
+    <link rel="icon" href="/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; line-height: 1.6; }
+        .container { max-width: 1200px; margin: auto; padding: 2rem; }
+        .section-title { text-align: center; margin-bottom: 2rem; color: #1a3c5c; }
+        .step { background: #f4f4f4; padding: 1.5rem; margin: 1.5rem 0; border-radius: 8px; border-left: 5px solid #1a3c5c; }
+        .step h3 { color: #1a3c5c; margin-bottom: 0.5rem; }
+        @media (max-width: 768px) { .step { padding: 1rem; } }
+    </style>
+    <script>
+        function loadHeaderFooter() {
+            fetch('/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-placeholder').innerHTML = data;
+                });
+            fetch('/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-placeholder').innerHTML = data;
+                });
+        }
+        document.addEventListener("DOMContentLoaded", loadHeaderFooter);
+    </script>
+</head>
+<body>
+
+    <div id="header-placeholder"></div>
+    
+    <div class="container">
+        <h1 class="section-title">Execution Process</h1>
+        
+        <div class="step">
+            <h3>01. Mandate & Requirement Intake</h3>
+            <p>We receive formal mandates, Letters of Intent (LOI), or defined requirements from buyers and partners, including product specifications, target pricing, quantities, delivery terms, and overall commercial framework.</p>
+        </div>
+        
+        <div class="step">
+            <h3>02. Offer Sourcing & Market Alignment</h3>
+            <p>We engage with verified suppliers and counterparties, review Soft Corporate Offers (SCO) or Full Corporate Offers (FCO), and align both sides on pricing, specifications, and transaction feasibility.</p>
+        </div>
+        
+        <div class="step">
+            <h3>03. Counterparty Verification & Due Diligence</h3>
+            <p>We conduct structured due diligence on all participants, verifying corporate credentials, operational capability, and transaction readiness to ensure credible and qualified engagement.</p>
+        </div>
+        
+        <div class="step">
+            <h3>04. Deal Structuring & Negotiation</h3>
+            <p>We coordinate negotiations between buyer and seller, refine commercial terms, and align key elements including pricing structure, delivery conditions, and contractual responsibilities.</p>
+        </div>
+        
+        <div class="step">
+            <h3>05. Contract Finalization & Financial Instruments</h3>
+            <p>We support the drafting and review of contracts and financial instruments, including Letters of Credit (LC), SBLC, or other banking mechanisms, ensuring clarity, compliance, and bankability prior to execution.</p>
+        </div>
+        
+        <div class="step">
+            <h3>06. Transaction Coordination & Execution</h3>
+            <p>We oversee the transaction process, coordinate documentation flow, and maintain structured communication between all parties to ensure disciplined and efficient execution.</p>
+        </div>
+        
+        <div class="step">
+            <h3>07. Closing & Completion</h3>
+            <p>We follow through to final delivery, payment confirmation, and successful transaction closure, ensuring all contractual obligations are fulfilled.</p>
+        </div>
+    </div>
+    
+    <div id="footer-placeholder"></div>
+
+</body>
+</html>
