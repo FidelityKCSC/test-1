@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fidelity KCSC | B2B Inter-Trade </title>
+    <link rel="icon" href="/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; line-height: 1.6; }
+
+        .container { max-width: 1200px; margin: auto; padding: 2rem; }
+
+        .hero {
+            background: linear-gradient(135deg, #f4f4f4 0%, #e8e8e8 100%);
+            padding: 2rem;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+
+        .intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1rem;
+            color: #333;
+        }
+
+        .solutions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .card {
+            background: white;
+            padding: 1.5rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .card h3 { color: #1a3c5c; margin-bottom: 0.5rem; }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+            gap: 1.5rem;
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #1a3c5c;
+        }
+
+        .why-choose {
+            background: #f9f9f9;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .why-choose .solutions-grid {
+            justify-items: center;
+            text-align: center;
+        }
+
+        .section-title {
+            text-align: center;
+            margin: 2rem 0 1rem 0;
+            color: #1a3c5c;
+        }
+
+        @media (max-width: 768px) {
+            .solutions-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+
+    <script>
+        function loadHeaderFooter() {
+            fetch('/header.html')
+                .then(r => r.text())
+                .then(data => document.getElementById('header-placeholder').innerHTML = data);
+
+            fetch('/footer.html')
+                .then(r => r.text())
+                .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+        }
+
+        document.addEventListener("DOMContentLoaded", loadHeaderFooter);
+    </script>
+</head>
+
+<body>
+
+<div id="header-placeholder"></div>
+
+<div class="container">
+
+    <div class="hero">
+        <div class="intro">
+            <p>
+                Fidelity KCSC is a specialized B2B trading firm delivering global sourcing and strategic trade advisory across key commodities and markets. Backed by over two decades of cross-border expertise, we provide reliable, transparent, and efficient supply chain solutions to businesses worldwide.
+            </p>
+        </div>
+    </div>
+
+    <h2 class="section-title">Trade Solutions</h2>
+
+    <div class="solutions-grid">
+
+        <div class="card">
+            <h3>🌍 Global Sourcing</h3>
+            <p>
+                Our expert global sourcing services connect you with reliable international partners through a comprehensive suite of supplier identification, commercial negotiation, and quality assurance solutions ensuring competitive pricing, efficient operational processes, and consistent performance excellence.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>📊 Market Intelligence</h3>
+            <p>
+                Our comprehensive market intelligence equips B2B ventures with real-time pricing, in-depth market analysis, and trend forecasting—transforming actionable insights into informed decisions and decisive competitive advantages.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>🤝 Trade Facilitation</h3>
+            <p>
+                We deliver professional trade facilitation services that connect verified buyers and sellers through precise matchmaking, expert contract negotiation, and coordinated logistics—ensuring seamless transactions while securing optimal commercial terms for our clients.
+            </p>
+        </div>
+
+    </div>
+
+    <h2 class="section-title">Execution & Control</h2>
+
+    <div class="solutions-grid">
+
+        <div class="card">
+            <h3>📋 Transaction Management</h3>
+            <p>
+                We manage the full transaction lifecycle from initial mandate to final delivery, ensuring structured coordination between all parties. Our approach covers commercial alignment, contract execution, logistics planning, and continuous follow-through to maintain efficiency, accuracy, and timely completion of each trade.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>⚙️ Trade Compliance</h3>
+            <p>
+                We ensure all transactions adhere to international trade regulations, contractual obligations, and financial instrument requirements. Through disciplined compliance oversight, we support proper documentation, regulatory alignment, and transparent execution across jurisdictions.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>🔒 Due Diligence</h3>
+            <p>
+                We conduct thorough due diligence on counterparties, including verification of business credentials, operational capability, and transaction readiness. This process helps mitigate risk, enhance trust, and ensure that all engagements are conducted with credible and qualified participants.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="stats">
+        <div><div class="stat-number">20+</div><p>Years Experience</p></div>
+        <div><div class="stat-number">Global</div><p>Trade Network</p></div>
+        <div><div class="stat-number">Executed</div><p>Structured Transactions</p></div>
+    </div>
+
+    <div class="why-choose">
+
+        <h2 style="margin-bottom:1.5rem;">Why Work With Us</h2>
+
+        <div class="solutions-grid">
+
+            <div>
+                <h3>✓ Global Market Access</h3>
+                <p>We provide direct access to a global network of verified buyers, suppliers, and strategic partners across key markets.</p>
+            </div>
+
+            <div>
+                <h3>✓ Structured Transactions</h3>
+                <p>We design and structure transactions with clear commercial frameworks, aligning all parties on pricing, terms, and execution to ensure efficient deals.</p>
+            </div>
+
+            <div>
+                <h3>✓ Execution Discipline</h3>
+                <p>We manage transactions with strict control, consistency, and oversight, ensuring accurate coordination and reliable delivery from initiation to completion.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div id="footer-placeholder"></div>
+
+</body>
+</html>
